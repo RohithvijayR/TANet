@@ -1,0 +1,26 @@
+{
+    "https://www.hackthebox.com/": {
+        "safe_votes": 4
+    },
+    "https://fast.com/": {
+        "safe_votes": 22
+    },
+    "https://web.whatsapp.com/": {
+        "safe_votes": 6
+    },
+    "https://meet.google.com/idv-rrds-ina": {
+        "safe_votes": 32
+    },
+    "https://toolscord.com/?": {
+        "safe_votes": 1
+    },
+    "https://havocctf.web.app/": {
+        "safe_votes": 17
+    },
+    "https://store.epicgames.com/": {
+        "safe_votes": 1
+    },
+    "https://store.steampowered.com/": {
+        "safe_votes": 2
+    }
+}

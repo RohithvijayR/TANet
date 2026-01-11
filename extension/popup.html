@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            width: 300px;
+            font-family: 'Segoe UI', sans-serif;
+            padding: 15px;
+        }
+
+        h3 {
+            margin-top: 0;
+            color: #333;
+        }
+
+        .status {
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .safe {
+            background: #E8F5E9;
+            color: #2E7D32;
+        }
+
+        .unsafe {
+            background: #FFEBEE;
+            color: #C62828;
+        }
+
+        .info {
+            font-size: 0.9em;
+            color: #666;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>PhishGuard AI</h3>
+
+    <!-- Status Section -->
+    <div id="status" class="status safe">Protected</div>
+    <div class="info">
+        <p>Scanning URLs in real-time.</p>
+        <p id="currentUrl">Current: ...</p>
+    </div>
+
+    <hr>
+
+    <!-- VPN Section -->
+    <div class="vpn-section">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+            <span style="font-weight: bold;">Secure VPN</span>
+            <label class="switch">
+                <input type="checkbox" id="vpnToggle">
+                <span class="slider round"></span>
+            </label>
+        </div>
+        <p id="vpnStatus" style="font-size: 0.8em; color: #666; margin-top: 5px;">Disconnected</p>
+        <button id="configBtn" style="font-size: 0.8em; padding: 5px; margin-top: 5px; width: 100%;">Configure
+            Proxy</button>
+    </div>
+
+    <!-- Configuration Form (Hidden) -->
+    <div id="configForm" style="display: none; border-top: 1px solid #eee; margin-top: 10px; padding-top: 10px;">
+        <input type="text" id="proxyHost" placeholder="Host (e.g., 13.53.35.65)" value="13.53.35.65"
+            style="width: 100%; margin-bottom: 5px;">
+        <input type="text" id="proxyPort" placeholder="Port (e.g., 8888)" value="8888"
+            style="width: 100%; margin-bottom: 5px;">
+        <select id="proxyProtocol" style="width: 100%; margin-bottom: 5px;">
+            <option value="http">HTTP</option>
+            <option value="https">HTTPS</option>
+            <option value="socks4">SOCKS4</option>
+            <option value="socks5">SOCKS5</option>
+        </select>
+        <button id="saveConfig">Save & Apply</button>
+    </div>
+
+    <!-- Report Section -->
+    <div style="margin-top: 15px; text-align: center;">
+        <button id="reportPhishingBtn"
+            style="background-color: #f44336; color: white; border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer; font-size: 0.8em; width: 100%;">
+            &#9888; Report as Phishing (False Negative)
+        </button>
+        <p id="reportStatus" style="font-size: 0.7em; color: #666; margin-top: 3px; display: none;"></p>
+    </div>
+
+    <!-- Debug Info -->
+    <div style="margin-top: 15px; border-top: 1px dashed #ccc; padding-top: 5px;">
+        <button id="debugBtn"
+            style="background: none; border: none; color: #999; cursor: pointer; font-size: 0.7em;">Show Debug
+            Info</button>
+        <pre id="debugOutput"
+            style="display: none; font-size: 0.7em; color: #333; background: #eee; padding: 5px; overflow-x: auto;"></pre>
+    </div>
+
+    <style>
+        /* Switch CSS */
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 40px;
+            height: 20px;
+        }
+
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: .4s;
+            border-radius: 20px;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 16px;
+            width: 16px;
+            left: 2px;
+            bottom: 2px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+
+        input:checked+.slider {
+            background-color: #2196F3;
+        }
+
+        input:checked+.slider:before {
+            transform: translateX(20px);
+        }
+
+        hr {
+            border: 0;
+            border-top: 1px solid #eee;
+            margin: 10px 0;
+        }
+    </style>
+
+    <script src="popup.js"></script>
+</body>
+
+</html>

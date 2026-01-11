@@ -1,0 +1,18 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.env
+
+# Dataset and Models (Large files)
+PhiUSIIL_Phishing_URL_Dataset.csv
+backend/model.pkl
+
+# IDEs
+.vscode/
+.idea/
+
+# System
+Thumbs.db
+Desktop.ini

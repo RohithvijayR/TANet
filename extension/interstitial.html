@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Phishing Detected</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #D32F2F;
+            color: white;
+            text-align: center;
+            padding: 50px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #B71C1C;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 1.2em;
+        }
+
+        .url-box {
+            background: rgba(0, 0, 0, 0.2);
+            padding: 10px;
+            border-radius: 5px;
+            word-break: break-all;
+            margin: 20px 0;
+            font-family: monospace;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            font-size: 1em;
+            cursor: pointer;
+            border-radius: 5px;
+            text-decoration: none;
+            border: none;
+            margin: 10px;
+            transition: background 0.3s;
+        }
+
+        .btn-safe {
+            background: #4CAF50;
+            color: white;
+            font-weight: bold;
+        }
+
+        .btn-danger {
+            background: transparent;
+            color: #ffcccc;
+            border: 1px solid #ffcccc;
+        }
+
+        .btn-safe:hover {
+            background: #388E3C;
+        }
+
+        .btn-danger:hover {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>&#9888; Warning</h1>
+        <h2>Phishing Suspected</h2>
+        <p>This site has been flagged by PhishGuard AI as potentially malicious.</p>
+
+        <div class="url-box" id="targetUrl">...</div>
+        <p id="reason">Reason: Analyzying...</p>
+
+        <br>
+        <button id="goBack" class="btn btn-safe">Go Back to Safety</button>
+        <button id="proceed" class="btn btn-danger">Proceed (Unsafe)</button>
+        <div style="margin-top: 20px; font-size: 0.9em; color: #ffcccc;">
+            <a href="#" id="reportSafe" style="color: white; text-decoration: underline;">Report as Safe (False
+                Positive)</a>
+        </div>
+    </div>
+
+    <script src="interstitial.js"></script>
+</body>
+
+</html>

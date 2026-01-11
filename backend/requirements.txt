@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+scikit-learn
+numpy
+pandas
+requests
+joblib
+dnspython
+tldextract
