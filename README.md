@@ -1,6 +1,6 @@
-# Phishing Detection System (PDS)
+# TANet - Threat Analysis Network
 
-A privacy-focused, AI-powered browser extension that detects phishing URLs in real-time.
+A privacy-focused, browser extension that detects phishing URLs in real-time.
 
 ## \ud83d\udee1\ufe0f System Architecture
 
