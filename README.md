@@ -2,26 +2,26 @@
 
 A privacy-focused, browser extension that detects phishing URLs in real-time.
 
-## \ud83d\udee1\ufe0f System Architecture
+## System Architecture
 
 The system consists of two main components:
 1.  **Chrome Extension**: Monitors navigation events and queries the backend. It uses a lightweight decision engine and caching.
 2.  **Machine Learning Backend (Python/FastAPI)**: Analyzes URLs using a Random Forest classifier trained on the `PhiUSIIL` dataset. Features are extracted purely from the URL string (structural & lexical), ensuring user privacy (no page content is scraped).
 
-## \ud83d\ude80 Features
+## Features
 
 -   **Real-time Protection**: Intercepts navigation to malicious sites instantly.
 -   **Privacy First**: Only the URL is analyzed. No cookies, session data, or page content is sent to the server.
 -   **Explainable AI**: Provides a reason for the block (e.g., "High Entropy Domain", "Suspicious TLD").
 -   **Resilient**: Background service worker with local caching for performance.
 
-## \ud83d\udcc1 Prerequisites
+## Prerequisites
 
 -   Python 3.8+
 -   Google Chrome (or Brave, Edge, etc.)
 -   `pip` (Python package manager)
 
-## \ud83d\udxe0 Installation & Setup
+## Installation & Setup
 
 ### 1. Backend Setup
 
@@ -58,7 +58,7 @@ The system consists of two main components:
 4.  Select the `extension` folder inside this project (`.../PDS/extension`).
     > **Note**: If you see an error about missing icons, run `python generate_icons.py` in the root directory to generate them.
 
-## \ud83d\udd75\ufe0f Usage
+## Usage
 
 1.  Ensure the Backend server is running.
 2.  Browse the web as usual.
@@ -69,7 +69,7 @@ The system consists of two main components:
     -   **Go Back**: Returns to the previous safe page.
     -   **Proceed**: Temporarily allows the specific URL (whitelists it for the session).
 
-## \ud83d\udcbb Development
+## Development
 
 -   **Backend**: Located in `/backend`.
     -   `features.py`: URL feature extraction logic.
