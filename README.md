@@ -80,6 +80,6 @@ The system consists of two main components:
     -   `background.js`: Main logic and event listeners.
     -   `interstitial.html/js`: The warning page.
 
-## \u26a0\ufe0f Disclaimer
+## Disclaimer
 
 This tool is a prototype for educational and research purposes. While it uses a high-accuracy model (98%+), no detection system is 100% perfect. Always exercise caution.
